@@ -142,3 +142,59 @@ def random_selection(choice_1, choice_2, y_or_n):
     
 yes_or_no = print("Enter y or n: ")
 random_selection(random_selection, "thing", yes_or_no)    
+
+while destination_confirmed is "n":
+    if destination_confirmed == "n":
+
+new_destination = oh_sorry(random.choice(destinations))
+new_destination1 = oh_sorry(random.choice(destinations))
+new_destination2 = oh_sorry(random.choice(destinations))
+new_destination3 = oh_sorry(random.choice(destinations))
+
+
+if new_destination == "y":
+        moving_on()
+    elif new_destination == "n":
+        new_destination1 = oh_sorry(random.choice(destinations))
+        new_destination1
+        if new_destination1 == "y":
+            moving_on()
+        elif new_destination1 =="n":
+            new_destination2 = oh_sorry(random.choice(destinations))
+            new_destination2
+            if new_destination2 == "y":
+                moving_on()
+            elif new_destination2 == "n":
+                new_destination3 = oh_sorry(random.choice(destinations))
+                new_destination3
+                if new_destination3 == "y":
+                    moving_on()
+                elif new_destination3 == "n":
+                    print("Ok, I think were are going to move on anyways...")
+
+
+
+#    if new_destination == "y":
+#        moving_on()
+#    else:
+#        oh_sorry(random.choice(destinations))
+
+
+
+#            if new_destination == "y":
+#                new_destination = "y"
+#            else:
+#                oh_sorry(random.choice(destinations))
+#    while new_destination == "n":
+#        oh_sorry(random.choice(destinations))
+#        if new_destination == "y":
+#            moving_on()
+#        else:
+#           oh_sorry(random.choice(destinations))
+
+
+    
+    #if new_destination == "y":
+       # moving_on()
+   # else:
+      #  oh_sorry(random.choice(destinations))
