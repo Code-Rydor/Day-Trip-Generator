@@ -22,17 +22,13 @@ string_entertainment = "form of entertainment"
 def moving_on():
     print("Great, I'm glad that's decided! Let's move on...")
 
-def oh_sorry(choice):
-    answer1 = input(f"Oh, sorry you didnt like this choice. No worries, we can try something else! How about {choice}? Enter y/n: ")
-    return answer1
+#def oh_sorry(choice):
+#    answer1 = input(f"Oh, sorry you didnt like this choice. No worries, we can try something else! How about {choice}? Enter y/n: ")
+#    return answer1
 
 def confirm_selection(choice_1, choice_2):
     answer = input(f"We have selected {choice_1} as your {choice_2}. Does this sound good to you? Enter y/n: ")
     return answer
-
-#def restart():
-#    confirm_selection(random.choice(destinations), string_destination)
-
 
 destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
 
