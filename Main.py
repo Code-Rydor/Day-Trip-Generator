@@ -22,9 +22,8 @@ string_entertainment = "form of entertainment"
 def moving_on():
     print("Great, I'm glad that's decided! Let's move on...")
 
-#def oh_sorry(choice):
-#    answer1 = input(f"Oh, sorry you didnt like this choice. No worries, we can try something else! How about {choice}? Enter y/n: ")
-#    return answer1
+def oh_sorry():
+    print("Oh, sorry you didnt like this choice. No worries, we can try something else!")
 
 def confirm_selection(choice_1, choice_2):
     answer = input(f"We have selected {choice_1} as your {choice_2}. Does this sound good to you? Enter y/n: ")
@@ -32,25 +31,58 @@ def confirm_selection(choice_1, choice_2):
 
 destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
 
-# if y, move on, if no, rerun randomization
+
 if destination_confirmed == "y":
     moving_on()
-elif destination_confirmed != "y":
-    print("Oh, sorry you didnt like this choice. No worries, we can try something else!")
+elif destination_confirmed == "n":
+    oh_sorry()
     destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
     if destination_confirmed == "y":
         moving_on()
-    elif destination_confirmed != "y":
-        print("Oh, sorry you didnt like this choice. No worries, we can try something else!")
+    elif destination_confirmed == "n":
+        oh_sorry()
         destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
         if destination_confirmed == "y":
             moving_on()
-        elif destination_confirmed != "y":
-            print("Oh, sorry you didnt like this choice. No worries, we can try something else!")
+        elif destination_confirmed == "n":
+            oh_sorry()
             destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
             if destination_confirmed == "y":
                 moving_on()
-            elif destination_confirmed != "y":
-                print(f"You seem to be indecisive, so let me choose for you! You're going to {random_destination}! How fun!")
+            elif destination_confirmed == "n":
+                oh_sorry()
+                destination_confirmed = confirm_selection(random.choice(destinations), string_destination)
+                if destination_confirmed == "y":
+                    moving_on()
+                elif destination_confirmed == "n":
+                    print(f"You seem to be indecisive, so let me choose for you! You're going to {random_destination}! How fun!")
                 
-print("Now lets ")
+print("Now lets decide on a how you're going to get there!")
+
+transportation_confirmed = confirm_selection(random.choice(travel_modes), string_travel)
+
+if transportation_confirmed == "y":
+    moving_on()
+elif transportation_confirmed == "n":
+    oh_sorry()
+    transportation_confirmed = confirm_selection(random.choice(travel_modes), string_travel)
+    if transportation_confirmed == "y":
+        moving_on()
+    elif transportation_confirmed == "n":
+        oh_sorry()
+        transportation_confirmed = confirm_selection(random.choice(travel_modes), string_travel)
+        if transportation_confirmed == "y":
+            moving_on()
+        elif transportation_confirmed == "n":
+            oh_sorry()
+            transportation_confirmed = confirm_selection(random.choice(travel_modes), string_travel)
+            if transportation_confirmed == "y":
+                moving_on()
+            elif transportation_confirmed == "n":
+                oh_sorry()
+                transportation_confirmed = confirm_selection(random.choice(travel_modes), string_travel)
+                if transportation_confirmed == "y":
+                    moving_on()
+                elif transportation_confirmed == "n":
+                    oh_sorry()
+                    print(f"You seem to be indecisive, so let me choose for you! You're going to {random_travel}! How fun!")
