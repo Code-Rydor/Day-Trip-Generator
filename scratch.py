@@ -1,200 +1,45 @@
 import random
+from tkinter import N
 
-'''def generate_destination(answer):
-    if answer == y:
-        print("Great! Moving on...")
-    else:
-
-
-print(random.choice(mylist))
-
-dest_1 = destinations[] # make a copy of the input list
-random.shuffle (dest_1)
-for i in range(1):
-    print(dest_1.pop())
-
-    dest_1 = destinations # make a copy of the input list
-random.shuffle (dest_1)
-for i in range(1):
-    print(dest_1.pop())
-
-#JJ's rework of my practice funtion calling a function
-
-def add_two_numbers(number_one, number_two):
-    sum = int(number_one) + int(number_two)
-    return sum
-def words(word_to_print, number_of_cycles):
-    for count in range(number_of_cycles):
-        print(count)
-        print(word_to_print)
-first_number = input("Please enter the first number!")
-second_number = input("Please enter the second number!")
-other_result = add_two_numbers(first_number, second_number)
-my_word = input("What's your favorite word?")
-words(my_word, other_result)
-'''
+print("Welcome to your day trip generator! This will help you choose the perfect day trip for your interests!")
 
 destinations = ["Katy, TX", "Conroe, TX", "Houston, TX", "Pearland, TX", "Galveston, TX"]
 restaurants = ["Arbys", "Wendys", "Burger King", "Taco Bell", "Dominos"]
 travel_modes = ["Plane", "Car", "Bike", "Train", "Boat"]
 entertainment_types = ["Bowling", "Frisbee Golf", "Fishing", "Mini Golf", "Shopping"]
 
-'''dest_1 = destinations[0]
-dest_2 = destinations[1]
-dest_3 = destinations[2]
-dest_4 = destinations[3]
-dest_5 = destinations[4]
-res_1 = restaurants[0]
-res_2 = restaurants[1]
-res_3 = restaurants[2]
-res_4 = restaurants[3]
-res_5 = restaurants[4]
-trav_1 = travel_modes[0]
-trav_2 = travel_modes[1]
-trav_3 = travel_modes[2]
-trav_4 = travel_modes[3]
-trav_5 = travel_modes[4]
-ent_1 = entertainment_types[0]
-ent_2 = entertainment_types[1]
-ent_3 = entertainment_types[2]
-ent_4 = entertainment_types[3]
-ent_5 = entertainment_types[4]
+random_destination = random.choice(destinations)
+random_restaurant = random.choice(restaurants)
+random_travel = random.choice(travel_modes)
+random_entertainment = random.choice(entertainment_types)
 
-def restart():
-    random_selection()
+string_destination = "destination"
+string_restaurant = "restaurant"
+string_travel = "mode of transportation"
+string_entertainment = "form of entertainment"
 
-def random_selection(choice_1, choice_2):
-    answer1 = input(f"We have selected {choice_1} as your {choice_2}. Does this sound good to you? Enter y/n: ")
-    if answer1 == "y":
+def moving_on():
+    print("Great, I'm glad that's decided! Let's move on...")
+
+def confirm_destination_selection():
+    answer = input(f"We have selected {random_destination} as your destination. Does this sound good to you? Enter y/n: ")
+    return answer
+
+def oh_sorry_destination():
+    answer = input(f"Oh, sorry you didnt like this choice. No worries, we can try something else! How about {random_destination}? Enter y or n: ")
+    return answer
+
+destination_confirmed = confirm_destination_selection()
+travel_mode_confirmed = 
+confirmed = False
+
+while confirmed is False:
+    if destination_confirmed == "y":
+        confirmed = True
         moving_on()
     else:
-        oh_sorry(dest_2)
-        if answer1 == "y":
-            moving_on()
-        else:
-            oh_sorry(dest_3)
-            if answer1 == "y":
-                 moving_on()
-            else:
-                oh_sorry(dest_4)
-                if answer1 == "y":
-                    moving_on()
-                else:
-                    oh_sorry(dest_5)
-                    if answer1 == "y":
-                        moving_on()
-                    else:
-                        print("It seems we have run out of options, let's try again!")
-                        restart()
-random_selection()
+        random_destination = random.choice(destinations)
+        destination_confirmed = input(f"Oh, sorry you didnt like this choice. No worries, we can try something else! How about {random_destination}? Enter y or n: ")
 
+print(random_destination)
 
-
-random.choice(list)
-
-def random_destination():
-    print(random.choice(destinations))
-
-def random_restaurant():
-    print(random.choice(restaurants))
-
-def random_travel_mode():
-    print(random.choice(travel_modes))
-
-def random_entertainment_types():
-    print(random.choice(entertainment_types))
-
-
-#def random_selection(choice_1, choice_2):
-#    print(input(f"We have selected {choice_1} as your {choice_2}. Does this sound good to you? Enter y/n: "))
-
-#random_selection()
-
-def random_destination():
-    print(random.choice(destinations))
-
-def random_restaurant():
-    print(random.choice(restaurants))
-
-def random_travel_mode():
-    print(random.choice(travel_modes))
-
-def random_entertainment_types():
-    print(random.choice(entertainment_types))
-
-    '''
-
-random_destination()
-random_restaurant()
-random_travel_mode()
-random_entertainment_types()
-
-answer1 = input(f"We have selected {random_destination} as your destination. Does this sound good to you? Enter y/n: ")
-
-if answer1 == "y":
-    moving_on()
-else:
-    oh_sorry(random_destination)
-    
-
-def random_selection(choice_1, choice_2, y_or_n):
-    print(f"We have selected {choice_1} as your {choice_2}. Does this sound good to you? Enter {y_or_n} ")
-    
-yes_or_no = print("Enter y or n: ")
-random_selection(random_selection, "thing", yes_or_no)    
-
-while destination_confirmed is "n":
-    if destination_confirmed == "n":
-
-new_destination = oh_sorry(random.choice(destinations))
-new_destination1 = oh_sorry(random.choice(destinations))
-new_destination2 = oh_sorry(random.choice(destinations))
-new_destination3 = oh_sorry(random.choice(destinations))
-
-
-if new_destination == "y":
-        moving_on()
-    elif new_destination == "n":
-        new_destination1 = oh_sorry(random.choice(destinations))
-        new_destination1
-        if new_destination1 == "y":
-            moving_on()
-        elif new_destination1 =="n":
-            new_destination2 = oh_sorry(random.choice(destinations))
-            new_destination2
-            if new_destination2 == "y":
-                moving_on()
-            elif new_destination2 == "n":
-                new_destination3 = oh_sorry(random.choice(destinations))
-                new_destination3
-                if new_destination3 == "y":
-                    moving_on()
-                elif new_destination3 == "n":
-                    print("Ok, I think were are going to move on anyways...")
-
-
-
-#    if new_destination == "y":
-#        moving_on()
-#    else:
-#        oh_sorry(random.choice(destinations))
-
-
-
-#            if new_destination == "y":
-#                new_destination = "y"
-#            else:
-#                oh_sorry(random.choice(destinations))
-#    while new_destination == "n":
-#        oh_sorry(random.choice(destinations))
-#        if new_destination == "y":
-#            moving_on()
-#        else:
-#           oh_sorry(random.choice(destinations))
-
-
-    
-    #if new_destination == "y":
-       # moving_on()
-   # else:
-      #  oh_sorry(random.choice(destinations))
